@@ -45,7 +45,10 @@ class Bank():
 
     def withdraw_money(self,balance):
         subtract = input('amount: ')
-        balance -=subtract
+        if balance < subtract:
+            print('you dont have enough money')
+        else:
+            balance -= subtract
 
     def balance_inquiry():
         pass
